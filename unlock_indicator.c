@@ -17,6 +17,9 @@
 #include <cairo.h>
 #include <cairo/cairo-xcb.h>
 
+#include <X11/XKBlib.h>
+#include <X11/extensions/XKBrules.h>
+
 #include "i3lock.h"
 #include "xcb.h"
 #include "unlock_indicator.h"
@@ -287,8 +290,10 @@ void draw_image(xcb_pixmap_t bg_pixmap, uint32_t *resolution) {
             x = BUTTON_CENTER - ((extents.width / 2) + extents.x_bearing);
             y = BUTTON_CENTER - ((extents.height / 2) + extents.y_bearing);
 
+
             cairo_move_to(ctx, x, y);
             cairo_show_text(ctx, text);
+
             cairo_close_path(ctx);
         }
 
@@ -327,8 +332,38 @@ void draw_image(xcb_pixmap_t bg_pixmap, uint32_t *resolution) {
                 /* For backspace, we use red. */
                 cairo_set_source_rgb(ctx, 219.0 / 255, 51.0 / 255, 0);
             }
-            cairo_stroke(ctx);
+            
+double x, y;
+cairo_text_extents_t extents;
+            cairo_set_font_size(ctx, 42.0);
 
+            cairo_text_extents(ctx, modifier_string, &extents);
+            x = BUTTON_CENTER - ((extents.width / 2) + extents.x_bearing);
+            y = BUTTON_CENTER - ((extents.height / 2) + extents.y_bearing) + 28.0;
+    Display *dpy = XOpenDisplay(NULL);
+
+  if (dpy == NULL) {
+    fprintf(stderr, "Cannot open display\n");
+    exit(1);
+  }
+  XkbStateRec state;
+  XkbGetState(dpy, XkbUseCoreKbd, &state);
+  XkbDescPtr desc = XkbGetKeyboard(dpy, XkbAllComponentsMask, XkbUseCoreKbd);
+  XGetAtomName(dpy, desc->names->groups[state.group]);
+  XkbRF_VarDefsRec vd;
+  XkbRF_GetNamesProp(dpy, NULL, &vd);
+  char *tok;
+  tok = strtok(vd.layout, ",");
+  for (int i = 0; i < state.group; i++) {
+    tok = strtok(NULL, ",");
+  }
+
+
+    cairo_move_to(ctx,x+15,y+20);
+    cairo_show_text(ctx, tok);
+
+
+            cairo_stroke(ctx);
             /* Draw two little separators for the highlighted part of the
              * unlock indicator. */
             cairo_set_source_rgb(ctx, 0, 0, 0);

@@ -1,0 +1,32 @@
+[
+  {
+    "directory": "/home/odity/bin/i3lock/build",
+    "command": "cc -Ii3lock.p -I. -I.. -I../include -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/pixman-1 '-I/usr/include -lX11 -lxkbfile' -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -O0 -g -Wunused-value -D_GNU_SOURCE -pthread -MD -MQ i3lock.p/dpi.c.o -MF i3lock.p/dpi.c.o.d -o i3lock.p/dpi.c.o -c ../dpi.c",
+    "file": "../dpi.c",
+    "output": "i3lock.p/dpi.c.o"
+  },
+  {
+    "directory": "/home/odity/bin/i3lock/build",
+    "command": "cc -Ii3lock.p -I. -I.. -I../include -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/pixman-1 '-I/usr/include -lX11 -lxkbfile' -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -O0 -g -Wunused-value -D_GNU_SOURCE -pthread -MD -MQ i3lock.p/i3lock.c.o -MF i3lock.p/i3lock.c.o.d -o i3lock.p/i3lock.c.o -c ../i3lock.c",
+    "file": "../i3lock.c",
+    "output": "i3lock.p/i3lock.c.o"
+  },
+  {
+    "directory": "/home/odity/bin/i3lock/build",
+    "command": "cc -Ii3lock.p -I. -I.. -I../include -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/pixman-1 '-I/usr/include -lX11 -lxkbfile' -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -O0 -g -Wunused-value -D_GNU_SOURCE -pthread -MD -MQ i3lock.p/randr.c.o -MF i3lock.p/randr.c.o.d -o i3lock.p/randr.c.o -c ../randr.c",
+    "file": "../randr.c",
+    "output": "i3lock.p/randr.c.o"
+  },
+  {
+    "directory": "/home/odity/bin/i3lock/build",
+    "command": "cc -Ii3lock.p -I. -I.. -I../include -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/pixman-1 '-I/usr/include -lX11 -lxkbfile' -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -O0 -g -Wunused-value -D_GNU_SOURCE -pthread -MD -MQ i3lock.p/unlock_indicator.c.o -MF i3lock.p/unlock_indicator.c.o.d -o i3lock.p/unlock_indicator.c.o -c ../unlock_indicator.c",
+    "file": "../unlock_indicator.c",
+    "output": "i3lock.p/unlock_indicator.c.o"
+  },
+  {
+    "directory": "/home/odity/bin/i3lock/build",
+    "command": "cc -Ii3lock.p -I. -I.. -I../include -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/pixman-1 '-I/usr/include -lX11 -lxkbfile' -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -O0 -g -Wunused-value -D_GNU_SOURCE -pthread -MD -MQ i3lock.p/xcb.c.o -MF i3lock.p/xcb.c.o.d -o i3lock.p/xcb.c.o -c ../xcb.c",
+    "file": "../xcb.c",
+    "output": "i3lock.p/xcb.c.o"
+  }
+]

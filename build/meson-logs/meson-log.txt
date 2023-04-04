@@ -1,0 +1,540 @@
+Build started at 2023-03-30T12:58:46.597832
+Main binary: /usr/bin/python
+Build Options: -Dprefix=/usr
+Python system: Linux
+The Meson build system
+Version: 1.0.1
+Source dir: /home/odity/bin/i3lock
+Build dir: /home/odity/bin/i3lock/build
+Build type: native build
+Project name: i3lock
+Project version: 2.14.1
+-----
+Detecting compiler via: cc --version
+compiler returned <Popen: returncode: 0 args: ['cc', '--version']>
+compiler stdout:
+cc (GCC) 12.2.1 20230201
+Copyright (C) 2022 Free Software Foundation, Inc.
+Это свободно распространяемое программное обеспечение. Условия копирования
+приведены в исходных текстах.
+
+  Без гарантии каких-либо качеств, включая 
+коммерческую ценность и применимость для каких-либо целей.
+
+
+
+
+compiler stderr:
+
+Running command: cc -E -dM -
+-----
+Detecting linker via: cc -Wl,--version
+linker returned <Popen: returncode: 0 args: ['cc', '-Wl,--version']>
+linker stdout:
+GNU ld (GNU Binutils) 2.40
+Copyright (C) 2023 Free Software Foundation, Inc.
+Эта программа является свободным программным обеспечением. Вы можете распространять
+её на условиях GNU General Public License версии 3 или (по вашему выбору)
+более поздней версии.
+Эта программа не имеет абсолютно никаких не гарантий.
+
+linker stderr:
+collect2 версия 12.2.1 20230201
+/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpGCAGm.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/../../.. --version -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../lib/crtn.o
+
+Sanity testing C compiler: cc
+Is cross compiler: False.
+Sanity check compiler command line: cc sanitycheckc.c -o sanitycheckc.exe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command:  /home/odity/bin/i3lock/build/meson-private/sanitycheckc.exe
+C compiler for the host machine: cc (gcc 12.2.1 "cc (GCC) 12.2.1 20230201")
+C linker for the host machine: cc ld.bfd 2.40
+-----
+Detecting compiler via: cc --version
+compiler returned <Popen: returncode: 0 args: ['cc', '--version']>
+compiler stdout:
+cc (GCC) 12.2.1 20230201
+Copyright (C) 2022 Free Software Foundation, Inc.
+Это свободно распространяемое программное обеспечение. Условия копирования
+приведены в исходных текстах.
+
+  Без гарантии каких-либо качеств, включая 
+коммерческую ценность и применимость для каких-либо целей.
+
+
+
+
+compiler stderr:
+
+Running command: cc -E -dM -
+-----
+Detecting linker via: cc -Wl,--version
+linker returned <Popen: returncode: 0 args: ['cc', '-Wl,--version']>
+linker stdout:
+GNU ld (GNU Binutils) 2.40
+Copyright (C) 2023 Free Software Foundation, Inc.
+Эта программа является свободным программным обеспечением. Вы можете распространять
+её на условиях GNU General Public License версии 3 или (по вашему выбору)
+более поздней версии.
+Эта программа не имеет абсолютно никаких не гарантий.
+
+linker stderr:
+collect2 версия 12.2.1 20230201
+/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccaNaQNW.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/../../.. --version -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../lib/crtn.o
+
+Sanity testing C compiler: cc
+Is cross compiler: False.
+Sanity check compiler command line: cc sanitycheckc.c -o sanitycheckc.exe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command:  /home/odity/bin/i3lock/build/meson-private/sanitycheckc.exe
+C compiler for the build machine: cc (gcc 12.2.1 "cc (GCC) 12.2.1 20230201")
+C linker for the build machine: cc ld.bfd 2.40
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Target machine cpu family: x86_64
+Target machine cpu: x86_64
+Running compile:
+Working directory:  /home/odity/bin/i3lock/build/meson-private/tmpux2logt3
+Command line:  cc /home/odity/bin/i3lock/build/meson-private/tmpux2logt3/testfile.c -o /home/odity/bin/i3lock/build/meson-private/tmpux2logt3/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wunused-value 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wunused-value: YES 
+Running compile:
+Working directory:  /home/odity/bin/i3lock/build/meson-private/tmpqvix_9r2
+Command line:  cc -I/usr/include -lX11 -lxkbfile /home/odity/bin/i3lock/build/meson-private/tmpqvix_9r2/testfile.c -o /home/odity/bin/i3lock/build/meson-private/tmpqvix_9r2/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -I/usr/include -lX11 -lxkbfile: YES 
+Running compile:
+Working directory:  /home/odity/bin/i3lock/build/meson-private/tmpjaz6dymw
+Command line:  cc /home/odity/bin/i3lock/build/meson-private/tmpjaz6dymw/testfile.c -o /home/odity/bin/i3lock/build/meson-private/tmpjaz6dymw/output.exe -D_FILE_OFFSET_BITS=64 -O0 -std=c11 
+
+Code:
+ 
+        #define strndup meson_disable_define_of_strndup
+        
+        #include <limits.h>
+        #undef strndup
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char strndup (void);
+        
+        #if defined __stub_strndup || defined __stub___strndup
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return strndup ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "strndup" : YES 
+Running compile:
+Working directory:  /home/odity/bin/i3lock/build/meson-private/tmpitjhoulu
+Command line:  cc /home/odity/bin/i3lock/build/meson-private/tmpitjhoulu/testfile.c -o /home/odity/bin/i3lock/build/meson-private/tmpitjhoulu/output.exe -D_FILE_OFFSET_BITS=64 -O0 -std=c11 
+
+Code:
+ 
+        #define mkdirp meson_disable_define_of_mkdirp
+        
+        #include <limits.h>
+        #undef mkdirp
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char mkdirp (void);
+        
+        #if defined __stub_mkdirp || defined __stub___mkdirp
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return mkdirp ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /usr/bin/ld: /tmp/ccdsAuKg.o: in function `main':
+testfile.c:(.text+0x5): undefined reference to `mkdirp'
+collect2: error: ld returned 1 exit status
+
+Running compile:
+Working directory:  /home/odity/bin/i3lock/build/meson-private/tmpe48ckrr_
+Command line:  cc /home/odity/bin/i3lock/build/meson-private/tmpe48ckrr_/testfile.c -o /home/odity/bin/i3lock/build/meson-private/tmpe48ckrr_/output.exe -D_FILE_OFFSET_BITS=64 -O0 -std=c11 
+
+Code:
+ 
+        int main(void) {
+
+        /* With some toolchains (MSYS2/mingw for example) the compiler
+         * provides various builtins which are not really implemented and
+         * fall back to the stdlib where they aren't provided and fail at
+         * build/link time. In case the user provides a header, including
+         * the header didn't lead to the function being defined, and the
+         * function we are checking isn't a builtin itself we assume the
+         * builtin is not functional and we just error out. */
+        #if !1 && !defined(mkdirp) && !0
+            #error "No definition for __builtin_mkdirp found in the prefix"
+        #endif
+
+        #ifdef __has_builtin
+            #if !__has_builtin(__builtin_mkdirp)
+                #error "__builtin_mkdirp not found"
+            #endif
+        #elif ! defined(mkdirp)
+            __builtin_mkdirp;
+        #endif
+        return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/odity/bin/i3lock/build/meson-private/tmpe48ckrr_/testfile.c: In function 'main':
+/home/odity/bin/i3lock/build/meson-private/tmpe48ckrr_/testfile.c:17:18: error: #error "__builtin_mkdirp not found"
+   17 |                 #error "__builtin_mkdirp not found"
+      |                  ^~~~~
+
+Checking for function "mkdirp" : NO 
+Configuring config.h.in using configuration
+Found git repository at /home/odity/bin/i3lock
+Running compile:
+Working directory:  /home/odity/bin/i3lock/build/meson-private/tmps66nyhsi
+Command line:  cc /home/odity/bin/i3lock/build/meson-private/tmps66nyhsi/testfile.c -o /home/odity/bin/i3lock/build/meson-private/tmps66nyhsi/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lm -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Library m found: YES
+Running compile:
+Working directory:  /home/odity/bin/i3lock/build/meson-private/tmpyblkjuxh
+Command line:  cc /home/odity/bin/i3lock/build/meson-private/tmpyblkjuxh/testfile.c -o /home/odity/bin/i3lock/build/meson-private/tmpyblkjuxh/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lrt -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Library rt found: YES
+Pkg-config binary for 1 is not cached.
+Pkg-config binary missing from cross or native file, or env var undefined.
+Trying a default Pkg-config fallback at pkg-config
+Found pkg-config: /usr/bin/pkg-config (1.8.1)
+Determining dependency 'xcb' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion xcb` -> 0
+stdout:
+1.15
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --cflags xcb` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs xcb` -> 0
+stdout:
+-L/usr/lib -lxcb
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs xcb` -> 0
+stdout:
+-lxcb
+-----------
+Running compile:
+Working directory:  /home/odity/bin/i3lock/build/meson-private/tmp64khza81
+Command line:  cc /home/odity/bin/i3lock/build/meson-private/tmp64khza81/testfile.c -o /home/odity/bin/i3lock/build/meson-private/tmp64khza81/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include<stdio.h>
+        
+        int main(void) {
+            printf("%ld\n", (long)(sizeof(void *)));
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Program stdout:
+
+8
+
+Program stderr:
+
+
+Running compile:
+Working directory:  /home/odity/bin/i3lock/build/meson-private/tmp9mxoanxq
+Command line:  cc /home/odity/bin/i3lock/build/meson-private/tmp9mxoanxq/testfile.c -o /home/odity/bin/i3lock/build/meson-private/tmp9mxoanxq/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
+
+Code:
+ 
+Compiler stdout:
+ install: /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/
+programs: =/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../x86_64-pc-linux-gnu/bin/x86_64-pc-linux-gnu/12.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../x86_64-pc-linux-gnu/bin/
+libraries: =/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../x86_64-pc-linux-gnu/lib/x86_64-pc-linux-gnu/12.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../x86_64-pc-linux-gnu/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/../../../x86_64-pc-linux-gnu/12.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../lib/:/lib/x86_64-pc-linux-gnu/12.2.1/:/lib/../lib/:/usr/lib/x86_64-pc-linux-gnu/12.2.1/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../x86_64-pc-linux-gnu/lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/../../../:/lib/:/usr/lib/
+
+Compiler stderr:
+ 
+Run-time dependency xcb found: YES 1.15
+Pkg-config binary for 1 is cached.
+Determining dependency 'xcb-xkb' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion xcb-xkb` -> 0
+stdout:
+1.15
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --cflags xcb-xkb` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs xcb-xkb` -> 0
+stdout:
+-L/usr/lib -lxcb-xkb
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs xcb-xkb` -> 0
+stdout:
+-lxcb-xkb
+-----------
+Run-time dependency xcb-xkb found: YES 1.15
+Pkg-config binary for 1 is cached.
+Determining dependency 'xcb-xinerama' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion xcb-xinerama` -> 0
+stdout:
+1.15
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --cflags xcb-xinerama` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs xcb-xinerama` -> 0
+stdout:
+-L/usr/lib -lxcb-xinerama
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs xcb-xinerama` -> 0
+stdout:
+-lxcb-xinerama
+-----------
+Run-time dependency xcb-xinerama found: YES 1.15
+Pkg-config binary for 1 is cached.
+Determining dependency 'xcb-randr' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion xcb-randr` -> 0
+stdout:
+1.15
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --cflags xcb-randr` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs xcb-randr` -> 0
+stdout:
+-L/usr/lib -lxcb-randr
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs xcb-randr` -> 0
+stdout:
+-lxcb-randr
+-----------
+Run-time dependency xcb-randr found: YES 1.15
+Pkg-config binary for 1 is cached.
+Determining dependency 'xcb-image' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion xcb-image` -> 0
+stdout:
+0.4.1
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --cflags xcb-image` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs xcb-image` -> 0
+stdout:
+-L/usr/lib -lxcb-image -lxcb -lxcb-shm
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs xcb-image` -> 0
+stdout:
+-lxcb-image -lxcb -lxcb-shm
+-----------
+Run-time dependency xcb-image found: YES 0.4.1
+Pkg-config binary for 1 is cached.
+Determining dependency 'xcb-util' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion xcb-util` -> 0
+stdout:
+0.4.1
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --cflags xcb-util` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs xcb-util` -> 0
+stdout:
+-L/usr/lib -lxcb-util -lxcb
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs xcb-util` -> 0
+stdout:
+-lxcb-util -lxcb
+-----------
+Run-time dependency xcb-util found: YES 0.4.1
+Pkg-config binary for 1 is cached.
+Determining dependency 'xcb-xrm' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion xcb-xrm` -> 0
+stdout:
+1.3
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --cflags xcb-xrm` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs xcb-xrm` -> 0
+stdout:
+-L/usr/lib -lxcb-xrm -lxcb
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs xcb-xrm` -> 0
+stdout:
+-lxcb-xrm -lxcb
+-----------
+Run-time dependency xcb-xrm found: YES 1.3
+Pkg-config binary for 1 is cached.
+Determining dependency 'xkbcommon' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion xkbcommon` -> 0
+stdout:
+1.5.0
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --cflags xkbcommon` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs xkbcommon` -> 0
+stdout:
+-L/usr/lib -lxkbcommon
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs xkbcommon` -> 0
+stdout:
+-lxkbcommon
+-----------
+Run-time dependency xkbcommon found: YES 1.5.0
+Pkg-config binary for 1 is cached.
+Determining dependency 'xkbcommon-x11' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion xkbcommon-x11` -> 0
+stdout:
+1.5.0
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --cflags xkbcommon-x11` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs xkbcommon-x11` -> 0
+stdout:
+-L/usr/lib -lxkbcommon-x11 -lxkbcommon
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs xkbcommon-x11` -> 0
+stdout:
+-lxkbcommon-x11 -lxkbcommon
+-----------
+Run-time dependency xkbcommon-x11 found: YES 1.5.0
+Pkg-config binary for 1 is cached.
+Determining dependency 'cairo' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion cairo` -> 0
+stdout:
+1.17.8
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --cflags cairo` -> 0
+stdout:
+-I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/sysprof-4 -pthread -I/usr/include/pixman-1
+-----------
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs cairo` -> 0
+stdout:
+-L/usr/lib -lcairo
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs cairo` -> 0
+stdout:
+-lcairo
+-----------
+Run-time dependency cairo found: YES 1.17.8
+Running compile:
+Working directory:  /home/odity/bin/i3lock/build/meson-private/tmpwug6_x7u
+Command line:  cc /home/odity/bin/i3lock/build/meson-private/tmpwug6_x7u/testfile.c -o /home/odity/bin/i3lock/build/meson-private/tmpwug6_x7u/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lev -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Library ev found: YES
+Run-time dependency threads found: YES
+Running compile:
+Working directory:  /home/odity/bin/i3lock/build/meson-private/tmpuh7vox_w
+Command line:  cc /home/odity/bin/i3lock/build/meson-private/tmpuh7vox_w/testfile.c -o /home/odity/bin/i3lock/build/meson-private/tmpuh7vox_w/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lpam -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Library pam found: YES
+Build targets in project: 2
+
+i3lock 2.14.1
+
+  User defined options
+    prefix: /usr
+
+Found ninja-1.11.1 at /usr/bin/ninja
+Failed to guess install tag for /etc/pam.d/dummy
+WARNING: Running the setup command as `meson [options]` instead of `meson setup [options]` is ambiguous and deprecated.

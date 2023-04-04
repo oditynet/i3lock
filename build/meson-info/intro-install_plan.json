@@ -1,0 +1,1 @@
+{"targets": {"/home/odity/bin/i3lock/build/i3lock": {"destination": "{bindir}/i3lock", "tag": "runtime"}}, "man": {"/home/odity/bin/i3lock/i3lock.1": {"destination": "{mandir}/man1/i3lock.1", "tag": "man"}}, "install_subdirs": {"/home/odity/bin/i3lock/pam": {"destination": "{sysconfdir}/pam.d", "tag": null}}}
